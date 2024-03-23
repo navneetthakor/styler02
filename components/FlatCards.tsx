@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
 const FlatCards = () => {
@@ -7,23 +7,20 @@ const FlatCards = () => {
             <Text style={styles.h1Heading}>FlatCards</Text>
 
             {/* division for cards  */}
-            <ScrollView horizontal={true} style={styles.container}>
-                    <View style={[styles.card, styles.cardOne]}>
-                        <Text>Rohanshu</Text>
+            <View style={styles.container}>
+                    <View style={[styles.card]}>
+                        <Text style={styles.cardText}>Rohanshu</Text>
                     </View>
-                    <View style={[styles.card, styles.cardTwo]}>
-                        <Text>NK</Text>
+                    <View style={[styles.card]}>
+                        <Text style={styles.cardText}>Meet</Text>
                     </View>
-                    <View style={[styles.card, styles.cardOne]}>
-                        <Text>Rohanshu</Text>
+                    <View style={[styles.card]}>
+                        <Text style={styles.cardText}>Raag</Text>
                     </View>
-                    <View style={[styles.card, styles.cardTwo]}>
-                        <Text>Raag</Text>
-                    </View>
-            </ScrollView>
+            </View>
         </View>
-    )
-}
+    );
+};
 
 export default FlatCards;
 
@@ -36,6 +33,8 @@ const styles = StyleSheet.create({
         height: 115,
         margin: 10,
         marginTop: 5,
+        display: 'flex',
+        flexDirection: 'row',
     },
     card: {
         display: 'flex',
@@ -45,12 +44,9 @@ const styles = StyleSheet.create({
         height: 100,
         marginLeft: 8,
         borderRadius: 8,
+        backgroundColor: 'lightgray',
     },
-    cardOne: {
-        backgroundColor: 'brown',
+    cardText: {
+        color: 'black',
     },
-    cardTwo: {
-        backgroundColor: '#9E1235',
-    },
-
-})
+});
