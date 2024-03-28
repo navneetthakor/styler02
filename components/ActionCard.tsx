@@ -2,7 +2,7 @@ import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-
 import React from 'react';
 
 const ActionCard = () => {
-    // to handle button press 
+    // to handle button press
     const openWebsite = async (websiteUrl: string) => {
             await Linking.openURL(websiteUrl);
     }
