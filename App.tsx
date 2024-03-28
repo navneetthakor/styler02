@@ -1,12 +1,12 @@
 import {
   SafeAreaView,
   ScrollView,
-  StyleSheet,
   } from 'react-native';
 import React from 'react';
 import FlatCards from './components/FlatCards';
 import ElavatedCards from './components/ElavatedCards';
 import FancyCard from './components/FancyCard';
+import ActionCard from './components/ActionCard';
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
         <FlatCards/>
         <ElavatedCards />
         <FancyCard />
+        <ActionCard />
       </ScrollView>
     </SafeAreaView>
   );
@@ -22,8 +23,3 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    fontSize: 14,
-  },
-});
